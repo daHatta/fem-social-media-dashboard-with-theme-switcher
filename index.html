@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-mode="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -18,6 +18,17 @@
     .attribution { font-size: 11px; text-align: center; margin-top: 8px; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script>
+    // Setting mode by checking localStorage and OS preference
+    let localStorageItem = localStorage.getItem("mode");
+    let modeToSet = localStorageItem;
+
+    if (!localStorageItem) {
+        modeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+    }
+
+    document.documentElement.setAttribute("data-mode", modeToSet);
+  </script>
 </head>
 <body>
   <div class="container">
@@ -27,10 +38,8 @@
         <div class="header__followers">Total Followers: 23,004</div>
       </div>
       <div class="color-mode__toggle-box">
-        <span class="color-mode__label">Dark Mode</span>
-        <div class="color-mode__toggle">
-          <input type="checkbox" id="theme" name="theme">
-        </div>
+        <label id="cm-label" class="color-mode__label">Dark Mode</label>
+        <span role="checkbox" id="cmPref" aria-checked="false" tabindex="0" aria-labelledby="cm-label" class="color-mode__toggle"></span>
       </div>
     </header>
     <main>
@@ -197,5 +206,6 @@
       </div>
     </footer>
   </div>
+  <script src="./js/main.js"></script>
 </body>
 </html>

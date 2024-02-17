@@ -14,7 +14,7 @@
     margin-block-start: .125em;
     font-size: $fs-300;
     font-weight: $fw-700;
-    color: $clr-fc-secondary;
+    color: var(--clr-fc-secondary);
 }
 
 @media screen and (min-width: $mq-desktop) {

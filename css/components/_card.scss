@@ -28,7 +28,7 @@
 
 .card__box {
     display: flow-root;
-    background-color: $clr-bg-card;
+    background-color: var(--clr-bg-card);
     border-radius: 0 0 6px 6px;
     padding-block-start: 1.75em;
     padding-block-end: 1.563em;
@@ -58,7 +58,7 @@
 .card__title {
     margin-block-start: 0;
     font-size: .75rem;
-    color: $clr-fc-secondary;
+    color: var(--clr-fc-secondary);
 }
 
 .card--daily .card__title {
@@ -103,7 +103,7 @@
     margin-block-start: .25em;
     font-size: $fs-200;
     text-transform: uppercase;
-    color: $clr-fc-secondary;
+    color: var(--clr-fc-secondary);
     letter-spacing: .3rem;
     font-weight: $fw-400;
 }
@@ -127,12 +127,12 @@
 }
 
 .status--up {
-    background-image: url("../../images/icon-up.svg");
+    background-image: url("../images/icon-up.svg");
     color: $clr-pry-lime-green;
 }
 
 .status--down {
-    background-image: url("../../images/icon-down.svg");
+    background-image: url("../images/icon-down.svg");
     color: $clr-pry-bright-red;
 }
 

@@ -2,9 +2,9 @@
 
 body {
     position: relative;
-    background-color: $clr-bg-body;
+    background-color: var(--clr-bg-body);
     font-family: $ff-primary;
-    color: $clr-fc-primary;
+    color: var(--clr-fc-primary);
 }
 
 body::before {
@@ -15,7 +15,7 @@ body::before {
     content: "";
     height: 235px;
     width: 100%;
-    background-color: $clr-bg-body-pattern;
+    background-color: var(--clr-bg-body-pattern);
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
 }
