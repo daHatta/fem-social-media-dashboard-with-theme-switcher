@@ -239,7 +239,7 @@ h1, h2 {
   transition: translateY(0) ease-in-out 3s;
 }
 
-[aria-checked=true]#cmPref:before {
+[aria-checked=true]#cmPref::before {
   content: "";
   width: 18px;
   height: 18px;
