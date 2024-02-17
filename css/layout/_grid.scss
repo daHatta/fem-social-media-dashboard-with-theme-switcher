@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.display {
+    display: grid;
+}
+
+.display--total {
+    margin-block-start: 1.5em;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+}
+
+.display--daily {
+    margin-block-start: 1.688em;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+@media screen and (min-width: $mq-desktop) {
+
+    .display--total {
+        margin-block-start: 2.625em;
+        grid-template-columns: repeat(4, 255px);
+        gap: 1.875em;
+    }
+
+    .display--daily {
+        margin-block-start: 1.5em;
+        grid-template-columns: repeat(4, 255px);
+        gap: 1.5em 1.875em;
+    }
+
+}

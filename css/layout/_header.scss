@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.header__box {
+    display: flow-root;
+    padding-block-start: 2.5em;
+}
+
+.header__title {
+    font-size: 1.5rem;
+    font-weight: $fw-700;
+}
+
+.header__followers {
+    margin-block-start: .125em;
+    font-size: $fs-300;
+    font-weight: $fw-700;
+    color: $clr-fc-secondary;
+}
+
+@media screen and (min-width: $mq-desktop) {
+    
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__title {
+        font-size: 1.75rem;
+    }
+
+}

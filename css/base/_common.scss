@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+body {
+    position: relative;
+    background-color: $clr-bg-body;
+    font-family: $ff-primary;
+    color: $clr-fc-primary;
+}
+
+body::before {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    display: block;
+    content: "";
+    height: 235px;
+    width: 100%;
+    background-color: $clr-bg-body-pattern;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+main {
+    display: flow-root;
+}
+
+h1, h2 {
+    margin-block-start: 0;
+}

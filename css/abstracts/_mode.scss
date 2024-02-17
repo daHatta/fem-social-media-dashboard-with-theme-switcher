@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+
+$clr-bg-body: $clr-ntld-very-dark-blue;
+$clr-bg-body-pattern: $clr-ntld-very-dark-blue-p;
+
+$clr-bg-card: $clr-ntld-dark-desaturated-blue;
+
+$clr-fc-primary: $clr-ntld-white;
+$clr-fc-secondary: $clr-ntld-desaturated-blue;
+
+$clr-border: $clr-ntld-desaturated-blue;
+
+
+@media screen and (prefers-color-scheme: light) {
+
+    $clr-bg-body: $clr-ntll-white;
+    $clr-bg-body-pattern: $clr-ntll-very-pale-blue;
+
+    $clr-bg-card: $clr-ntll-light-grayish-blue;
+
+    $clr-fc-primary: $clr-ntll-very-dark-blue;
+    $clr-fc-secondary: $clr-ntll-dark-grayish-blue;
+
+    $clr-border: $clr-ntll-dark-grayish-blue;
+
+}

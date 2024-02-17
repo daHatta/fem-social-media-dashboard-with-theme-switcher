@@ -1,0 +1,145 @@
+@use "../abstracts" as *;
+
+.card--total {
+    border-radius: 6px 6px 12px 12px;
+    padding-block-start: .25em;
+}
+
+.card--daily {
+    border-radius: 6px;
+}
+
+// branding of social media channels
+.facebook {
+    background: $clr-scm-facebook;
+}
+
+.twitter {
+    background: $clr-scm-twitter;
+}
+
+.instagram {
+    background: linear-gradient(to right, $clr-scm-instagram);
+}
+
+.youtube {
+    background: $clr-scm-youtube;
+}
+
+.card__box {
+    display: flow-root;
+    background-color: $clr-bg-card;
+    border-radius: 0 0 6px 6px;
+    padding-block-start: 1.75em;
+    padding-block-end: 1.563em;
+    
+}
+
+.card--daily .card__box {
+    padding-block-start: 1.625em;
+    padding-block-end: 1.25em;
+    padding-inline-start: 1.563em;
+    padding-inline-end: 1.938em;
+    border-radius: 6px;
+}
+
+.card__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.card--daily .card__header {
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.card__title {
+    margin-block-start: 0;
+    font-size: .75rem;
+    color: $clr-fc-secondary;
+}
+
+.card--daily .card__title {
+    font-size: $fs-300;
+}
+
+.card__image {
+    margin-inline-end: .5em;
+    width: 20px;
+    height: 20px;
+}
+
+.card--daily .card__image {
+    margin-inline-end: 0;
+}
+
+.card__info {
+    margin-block-start: 1.375em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.card--daily .card__info {
+    margin-block-start: 1.5em;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card__info-num {
+    font-size: 3.375rem;
+    font-weight: $fw-700;
+}
+
+.card--daily .card__info-num {
+    font-size: 2rem;
+}
+
+.card__info-typ {
+    margin-block-start: .25em;
+    font-size: $fs-200;
+    text-transform: uppercase;
+    color: $clr-fc-secondary;
+    letter-spacing: .3rem;
+    font-weight: $fw-400;
+}
+
+.card__info-status {
+    margin-block-start: 2.25em;
+    font-size: .75rem;
+    text-align: center;
+    font-weight: $fw-700;
+}
+
+.card--daily .card__info-status {
+    margin-block-start: 1.25em;
+}
+
+.status--up,
+.status--down {
+    padding-inline-start: 12px;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.status--up {
+    background-image: url("../../images/icon-up.svg");
+    color: $clr-pry-lime-green;
+}
+
+.status--down {
+    background-image: url("../../images/icon-down.svg");
+    color: $clr-pry-bright-red;
+}
+
+@media screen and (min-width: $mq-desktop) {
+
+    .card__info-typ {
+        margin-block-start: .5em;
+    }
+
+}

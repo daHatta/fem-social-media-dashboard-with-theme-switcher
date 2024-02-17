@@ -1,0 +1,346 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul, ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  position: relative;
+  background-color: hsl(230, 17%, 14%);
+  font-family: "Inter", sans;
+  color: hsl(0, 0%, 100%);
+}
+
+body::before {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  height: 235px;
+  width: 100%;
+  background-color: hsl(232, 19%, 15%);
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+main {
+  display: flow-root;
+}
+
+h1, h2 {
+  margin-block-start: 0;
+}
+
+.display {
+  display: grid;
+}
+
+.display--total {
+  margin-block-start: 1.5em;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+}
+
+.display--daily {
+  margin-block-start: 1.688em;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+@media screen and (min-width: 1440px) {
+  .display--total {
+    margin-block-start: 2.625em;
+    grid-template-columns: repeat(4, 255px);
+    gap: 1.875em;
+  }
+  .display--daily {
+    margin-block-start: 1.5em;
+    grid-template-columns: repeat(4, 255px);
+    gap: 1.5em 1.875em;
+  }
+}
+.header__box {
+  display: flow-root;
+  padding-block-start: 2.5em;
+}
+
+.header__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header__followers {
+  margin-block-start: 0.125em;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: hsl(228, 34%, 66%);
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__title {
+    font-size: 1.75rem;
+  }
+}
+.section {
+  margin-block-start: 3em;
+}
+
+.section__title {
+  font-size: 1.5rem;
+}
+
+.container {
+  margin-inline: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 326px;
+  display: flow-root;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1110px;
+  }
+}
+.color-mode__toggle-box {
+  margin-block-start: 1.375em;
+  padding-block: 1em;
+  border-top: 1px solid hsl(228, 34%, 66%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-mode__label {
+  color: hsl(228, 34%, 66%);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.color-mode__toggle {
+  height: 24px;
+  width: 48px;
+  border-radius: 25px;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+@media screen and (min-width: 1440px) {
+  .color-mode__toggle-box {
+    border-top: 0;
+  }
+  .color-mode__label {
+    margin-inline-end: 0.875em;
+  }
+}
+.card--total {
+  border-radius: 6px 6px 12px 12px;
+  padding-block-start: 0.25em;
+}
+
+.card--daily {
+  border-radius: 6px;
+}
+
+.facebook {
+  background: hsl(208, 92%, 53%);
+}
+
+.twitter {
+  background: hsl(203, 89%, 53%);
+}
+
+.instagram {
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.youtube {
+  background: hsl(348, 97%, 39%);
+}
+
+.card__box {
+  display: flow-root;
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 0 0 6px 6px;
+  padding-block-start: 1.75em;
+  padding-block-end: 1.563em;
+}
+
+.card--daily .card__box {
+  padding-block-start: 1.625em;
+  padding-block-end: 1.25em;
+  padding-inline-start: 1.563em;
+  padding-inline-end: 1.938em;
+  border-radius: 6px;
+}
+
+.card__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.card--daily .card__header {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.card__title {
+  margin-block-start: 0;
+  font-size: 0.75rem;
+  color: hsl(228, 34%, 66%);
+}
+
+.card--daily .card__title {
+  font-size: 0.875rem;
+}
+
+.card__image {
+  margin-inline-end: 0.5em;
+  width: 20px;
+  height: 20px;
+}
+
+.card--daily .card__image {
+  margin-inline-end: 0;
+}
+
+.card__info {
+  margin-block-start: 1.375em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.card--daily .card__info {
+  margin-block-start: 1.5em;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__info-num {
+  font-size: 3.375rem;
+  font-weight: 700;
+}
+
+.card--daily .card__info-num {
+  font-size: 2rem;
+}
+
+.card__info-typ {
+  margin-block-start: 0.25em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: hsl(228, 34%, 66%);
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+}
+
+.card__info-status {
+  margin-block-start: 2.25em;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.card--daily .card__info-status {
+  margin-block-start: 1.25em;
+}
+
+.status--up,
+.status--down {
+  padding-inline-start: 12px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.status--up {
+  background-image: url("../../images/icon-up.svg");
+  color: hsl(163, 72%, 41%);
+}
+
+.status--down {
+  background-image: url("../../images/icon-down.svg");
+  color: hsl(356, 69%, 56%);
+}
+
+@media screen and (min-width: 1440px) {
+  .card__info-typ {
+    margin-block-start: 0.5em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

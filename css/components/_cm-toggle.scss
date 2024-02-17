@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.color-mode__toggle-box {
+    margin-block-start: 1.375em;
+    padding-block: 1em;
+    border-top: 1px solid $clr-border;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-mode__label {
+    color: $clr-fc-secondary;
+    font-size: $fs-300;
+    font-weight: $fw-700;
+}
+
+.color-mode__toggle {
+    height: 24px;
+    width: 48px;
+    border-radius: 25px;
+    background: linear-gradient(to right, $clr-toggle-dark);
+}
+
+
+@media screen and (min-width: $mq-desktop) {
+    
+    .color-mode__toggle-box {
+        border-top: 0;
+    }
+
+    .color-mode__label {
+        margin-inline-end: .875em;
+    }
+
+}

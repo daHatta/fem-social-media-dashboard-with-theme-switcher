@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+.container {
+    margin-inline: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 326px;
+    display: flow-root;
+}
+
+@media screen and (min-width: $mq-desktop) {
+    
+    .container {
+        width: 1110px;
+    }
+
+}

@@ -1,0 +1,58 @@
+
+// ## Colors
+
+// ## Layout
+
+$mq-mobile: 375px;
+$mq-desktop: 1440px;
+
+// ### Primary
+
+$clr-pry-lime-green: hsl(163, 72%, 41%);
+$clr-pry-bright-red: hsl(356, 69%, 56%);
+
+// #### Social Media Channels
+$clr-scm-facebook: hsl(208, 92%, 53%);
+$clr-scm-twitter: hsl(203, 89%, 53%);
+$clr-scm-instagram: hsl(37, 97%, 70%), hsl(329, 70%, 58%);
+$clr-scm-youtube: hsl(348, 97%, 39%);
+
+// #### Toggle Dark Theme
+
+$clr-toggle-dark: hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+
+// #### Toggle Light Theme
+
+$clr-toggle-light: hsl(230, 22%, 74%);
+
+// ### Neutral
+
+// #### Dark Theme
+
+$clr-ntld-very-dark-blue: hsl(230, 17%, 14%);           // Background
+$clr-ntld-very-dark-blue-p: hsl(232, 19%, 15%);         // Top BG Pattern    
+$clr-ntld-dark-desaturated-blue: hsl(228, 28%, 20%);    // Card BG
+$clr-ntld-desaturated-blue: hsl(228, 34%, 66%);         // Text blue
+$clr-ntld-white: hsl(0, 0%, 100%);                      // Text white
+
+// #### Light Theme
+
+$clr-ntll-white: hsl(0, 0%, 100%);                      // Background
+$clr-ntll-very-pale-blue: hsl(225, 100%, 98%);          // Top BG Pattern
+$clr-ntll-light-grayish-blue: hsl(227, 47%, 96%);       // Card BG
+$clr-ntll-dark-grayish-blue: hsl(228, 12%, 44%);        // Text gray blue
+$clr-ntll-very-dark-blue: hsl(230, 17%, 14%);           // Text dark blue
+
+// ## Typography
+
+// ### Body Copy
+
+$fs-200: .75rem;
+$fs-300: .875rem;                                         // Overview Card Headings - 14px
+
+// ### Font
+
+$ff-primary: 'Inter', sans; //[Inter](https://fonts.google.com/specimen/Inter)
+
+$fw-400: 400;
+$fw-700: 700;
