@@ -3,6 +3,20 @@
 // Color Mode Switcher
 const colorSwitchBtn = document.getElementById("cmPref");
 
+// Set Origin
+const currentMode = document.documentElement.getAttribute("data-mode", modeToSet);
+
+const label = document.getElementById("cm-label");
+
+if (currentMode === "dark") {
+    colorSwitchBtn.setAttribute("aria-checked", "false");
+    label.innerHTML = "Dark Mode";
+}  else {
+    colorSwitchBtn.setAttribute("aria-checked", "true");
+    label.innerHTML = "Light Mode";
+}
+
+
 const changeCheckbox = (e) => {
     // Keycode
     const spacebarKeyCode = 32;
