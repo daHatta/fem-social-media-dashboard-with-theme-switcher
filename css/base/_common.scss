@@ -1,23 +1,23 @@
 @use "../abstracts" as *;
 
 body {
-    position: relative;
     background-color: var(--clr-bg-body);
-    font-family: $ff-primary;
     color: var(--clr-fc-primary);
+    font-family: $ff-primary;
+    position: relative;
 }
 
 body::before {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    display: block;
-    content: "";
-    height: 235px;
-    width: 100%;
     background-color: var(--clr-bg-body-pattern);
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
+    content: "";
+    display: block;
+    height: 235px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 main {

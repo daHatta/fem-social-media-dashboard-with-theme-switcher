@@ -26,39 +26,48 @@
     background: $clr-scm-youtube;
 }
 
+
 .card__box {
-    display: flow-root;
     background-color: var(--clr-bg-card);
     border-radius: 0 0 6px 6px;
-    padding-block-start: 1.75em;
+    display: flow-root;
     padding-block-end: 1.563em;
+    padding-block-start: 1.75em;
     
 }
 
 .card--daily .card__box {
-    padding-block-start: 1.625em;
-    padding-block-end: 1.25em;
-    padding-inline-start: 1.563em;
-    padding-inline-end: 1.938em;
     border-radius: 6px;
+    padding-block-end: 1.25em;
+    padding-block-start: 1.625em;
+    padding-inline-end: 1.938em;
+    padding-inline-start: 1.563em;
+}
+
+.card--daily:hover .card__box,
+.card--total:hover .card__box,
+.card--daily:focus-visible .card__box,
+.card--total:focus-visible .card__box {
+    background-color: var(--clr-bg-card-hover);
+    cursor: pointer;
 }
 
 .card__header {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
 }
 
 .card--daily .card__header {
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .card__title {
-    margin-block-start: 0;
-    font-size: .75rem;
     color: var(--clr-fc-secondary);
+    font-size: .75rem;
+    margin-block-start: 0;
 }
 
 .card--daily .card__title {
@@ -66,9 +75,9 @@
 }
 
 .card__image {
+    height: 20px;
     margin-inline-end: .5em;
     width: 20px;
-    height: 20px;
 }
 
 .card--daily .card__image {
@@ -76,18 +85,18 @@
 }
 
 .card__info {
-    margin-block-start: 1.375em;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-block-start: 1.375em;
     line-height: 1.1;
 }
 
 .card--daily .card__info {
-    margin-block-start: 1.5em;
     flex-direction: row;
     justify-content: space-between;
+    margin-block-start: 1.5em;
 }
 
 .card__info-num {
@@ -100,19 +109,19 @@
 }
 
 .card__info-typ {
-    margin-block-start: .25em;
-    font-size: $fs-200;
-    text-transform: uppercase;
     color: var(--clr-fc-secondary);
-    letter-spacing: .3rem;
+    font-size: $fs-200;
     font-weight: $fw-400;
+    letter-spacing: .3rem;
+    margin-block-start: .25em;
+    text-transform: uppercase;
 }
 
 .card__info-status {
-    margin-block-start: 2.25em;
     font-size: .75rem;
-    text-align: center;
     font-weight: $fw-700;
+    margin-block-start: 2.25em;
+    text-align: center;
 }
 
 .card--daily .card__info-status {
@@ -121,9 +130,9 @@
 
 .status--up,
 .status--down {
-    padding-inline-start: 12px;
-    background-repeat: no-repeat;
     background-position: center left;
+    background-repeat: no-repeat;
+    padding-inline-start: 12px;
 }
 
 .status--up {

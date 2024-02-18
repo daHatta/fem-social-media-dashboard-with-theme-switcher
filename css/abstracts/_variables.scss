@@ -35,6 +35,9 @@ $clr-ntld-dark-desaturated-blue: hsl(228, 28%, 20%);    // Card BG
 $clr-ntld-desaturated-blue: hsl(228, 34%, 66%);         // Text blue
 $clr-ntld-white: hsl(0, 0%, 100%);                      // Text white
 
+$clr-ntld-med-desaturated-blue: hsl(228, 26%, 27%);     // Card BG Hover
+
+
 // #### Light Theme
 
 $clr-ntll-white: hsl(0, 0%, 100%);                      // Background
@@ -42,6 +45,8 @@ $clr-ntll-very-pale-blue: hsl(225, 100%, 98%);          // Top BG Pattern
 $clr-ntll-light-grayish-blue: hsl(227, 47%, 96%);       // Card BG
 $clr-ntll-dark-grayish-blue: hsl(228, 12%, 44%);        // Text gray blue
 $clr-ntll-very-dark-blue: hsl(230, 17%, 14%);           // Text dark blue
+
+$clr-ntll-darker-grayish-blue: hsl(232, 33%, 91%);      // Card BG Hover
 
 // ## Typography
 
@@ -58,7 +63,9 @@ $fw-400: 400;
 $fw-700: 700;
 
 
+// Dark Color Mode
 :root[data-mode="dark"] {
+    
     --clr-bg-body: #{$clr-ntld-very-dark-blue};
     --clr-bg-body-pattern: #{$clr-ntld-very-dark-blue-p};
 
@@ -68,8 +75,12 @@ $fw-700: 700;
     --clr-fc-secondary: #{$clr-ntld-desaturated-blue};
 
     --clr-border: #{$clr-ntld-desaturated-blue};
+
+    --clr-bg-card-hover: #{$clr-ntld-med-desaturated-blue};
+    --clr-toggle-hover: #{$clr-ntld-dark-desaturated-blue};
 }
 
+// Light Color Mode
 :root[data-mode="light"] {
 
     --clr-bg-body: #{$clr-ntll-white};
@@ -82,4 +93,6 @@ $fw-700: 700;
 
     --clr-border: #{$clr-ntll-dark-grayish-blue};
 
+    --clr-bg-card-hover: #{$clr-ntll-darker-grayish-blue};
+    --clr-toggle-hover: #{$clr-ntll-darker-grayish-blue};
 }

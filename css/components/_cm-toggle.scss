@@ -1,29 +1,29 @@
 @use "../abstracts" as *;
 
 .color-mode__toggle-box {
-    margin-block-start: 1.375em;
-    padding-block: 1em;
+    align-items: center;
     border-top: 1px solid var(--clr-border);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    margin-block-start: 1.375em;
+    padding-block: 1em;
 }
 
 .color-mode__label {
     color: var(--clr-fc-secondary);
+    display: inline-block;
     font-size: $fs-300;
     font-weight: $fw-700;
-    display: inline-block;
 }
 
 .color-mode__toggle {
-    height: 24px;
-    width: 48px;
-    border-radius: 25px;
     background: linear-gradient(to right, $clr-toggle-dark);
-    position: relative;
+    border-radius: 25px;
     cursor: pointer;
+    height: 24px;
+    position: relative;
+    width: 48px;
 }
 
 [aria-checked="false"]#cmPref::before {
@@ -52,6 +52,12 @@
     transition: translateY(100%) ease-in-out 3s;
 }
 
+.color-mode__toggle:hover[aria-checked="false"]#cmPref::before,
+.color-mode__toggle:focus-visible[aria-checked="false"]#cmPref::before,
+.color-mode__toggle:hover[aria-checked="true"]#cmPref::before,
+.color-mode__toggle:focus-visible[aria-checked="true"]#cmPref::before {
+    background-color: var(--clr-toggle-hover);
+} 
 
 @media screen and (min-width: $mq-desktop) {
     
